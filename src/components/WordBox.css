@@ -1,0 +1,14 @@
+.progress {
+    background-image: linear-gradient(to right, #cb82ed, #d391f2, #dba1f6, #e2b0fb, #eabfff);
+    animation: progressBar 5s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes progressBar {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
