@@ -2,6 +2,8 @@ import WordBox from "@components/WordBox/WordBox";
 // import WordBoxV2 from "@/components/WordBox/WordBoxV2";
 import { useCallback, useState } from "react";
 import data_json from "@data/word.json";
+import { useNavigate } from "react-router-dom";
+import { ChevronLeft } from "react-feather";
 
 export type DataStuct = {
     lang: string;
@@ -9,6 +11,8 @@ export type DataStuct = {
 };
 
 const ToDo = () => {
+    const nevigate = useNavigate();
+
     const [data, setData] = useState<DataStuct[]>(data_json);
 
     const [data_word_th, setDataWordTH] = useState<DataStuct[]>([]);
@@ -48,8 +52,17 @@ const ToDo = () => {
 
     return (
         <div className="flex min-h-[100vh] w-[100vw] items-center">
-            <div className="flex w-full justify-center min-h-[100vh] p-10 bg-slate-400">
-                <div className="flex container max-w-[1024px]">
+            <div className="flex w-full items-center min-h-[100vh] p-10 bg-slate-400 flex-col">
+                <div className="flex container max-w-[1024px] mb-5 px-5">
+                    <div
+                        className="flex items-center px-3 py-2 bg-white rounded-md shadow-md cursor-pointer"
+                        onClick={() => nevigate("/")}
+                    >
+                        <ChevronLeft />
+                        Back
+                    </div>
+                </div>
+                <div className="flex container max-w-[1024px] flex-1">
                     <div className="flex w-full flex-col px-5">
                         <WordBox
                             head

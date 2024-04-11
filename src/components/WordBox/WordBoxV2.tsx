@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { MouseEvent, useCallback, useState } from "react";
 import { Lock, Unlock } from "react-feather";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { DataStuct } from "@pages/ToDoList/ToDo";
+import { DataStuct } from "@pages/ToDoList/ToDoV1";
 
 type WordBoxProps = {
     text?: string;

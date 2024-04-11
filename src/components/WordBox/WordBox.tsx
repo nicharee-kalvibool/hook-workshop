@@ -1,4 +1,4 @@
-import { DataStuct } from "@pages/ToDoList/ToDo";
+import { DataStuct } from "@pages/ToDoList/ToDoV1";
 import classNames from "classnames";
 import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import { Lock, Unlock } from "react-feather";

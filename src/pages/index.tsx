@@ -1,2 +1,2 @@
 export { default as HomePage } from "./Home";
-export { default as ToDoListPage } from "./ToDoList";
+export { ToDoV1, ToDoV2 } from "./ToDoList";

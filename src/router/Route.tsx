@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import { HomePage, ToDoListPage } from "@pages/index";
+import { HomePage, ToDoV1, ToDoV2 } from "@pages/index";
 
 const Router = () => {
     const element = useRoutes([
@@ -7,7 +7,8 @@ const Router = () => {
             path: "/",
             element: <HomePage />,
         },
-        { path: "/assignment-2", element: <ToDoListPage /> },
+        { path: "/assignment-2-ver-1", element: <ToDoV1 /> },
+        { path: "/assignment-2-ver-2", element: <ToDoV2 /> },
     ]);
     return element;
 };

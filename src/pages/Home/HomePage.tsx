@@ -18,12 +18,21 @@ const HomePage = () => {
                 />
                 <label htmlFor="menu">Menu</label>
                 <div className={styles.menu}>
-                    <div onClick={() => handleNevigate("/assignment-2")}>
-                        <span>Assignment 2</span>
+                    <div onClick={() => handleNevigate("/assignment-2-ver-1")}>
+                        <span className="flex flex-col items-center">
+                            <div>Assignment 2</div>
+                            <div>(Ver.1)</div>
+                        </span>
+
                         <Book color="#fff" />
                     </div>
-                    <div className={styles.disbaled}>
-                        <HelpCircle color="#ddd" />
+                    <div onClick={() => handleNevigate("/assignment-2-ver-2")}>
+                        <span className="flex flex-col items-center">
+                            <div>Assignment 2</div>
+                            <div>(Ver.2)</div>
+                        </span>
+
+                        <Book color="#fff" />
                     </div>
                     <div className={styles.disbaled}>
                         <HelpCircle color="#ddd" />
