@@ -1,10 +1,11 @@
-import ToDo from "./pages/ToDoList";
+import Router from "@router/index";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
     return (
-        <div className="flex min-h-[100vh] w-[100vw] items-center">
-            <ToDo />
-        </div>
+        <BrowserRouter>
+            <Router />
+        </BrowserRouter>
     );
 }
 

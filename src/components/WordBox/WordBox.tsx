@@ -2,7 +2,7 @@ import { DataStuct } from "@pages/ToDoList/ToDo";
 import classNames from "classnames";
 import { MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import { Lock, Unlock } from "react-feather";
-import "./WordBox.css";
+import "./styles/WordBox.css";
 
 type WordBoxProps = {
     text?: string;

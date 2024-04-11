@@ -1,5 +1,5 @@
-import WordBox from "@components/WordBox";
-// import WordBoxV2 from "@/components/WordBoxV2";
+import WordBox from "@components/WordBox/WordBox";
+// import WordBoxV2 from "@/components/WordBox/WordBoxV2";
 import { useCallback, useState } from "react";
 import data_json from "@data/word.json";
 
@@ -47,59 +47,61 @@ const ToDo = () => {
     );
 
     return (
-        <div className="flex w-full justify-center min-h-[100vh] p-10 bg-slate-400">
-            <div className="flex container max-w-[1024px]">
-                <div className="flex w-full flex-col px-5">
-                    <WordBox
-                        head
-                        text="คำศัพท์"
-                    />
-                    <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
-                        {data.map((item, key) => (
-                            <WordBox
-                                key={key}
-                                text={item.word}
-                                onClick={() => fnHandleClickAddItem(item.word)}
-                            />
-                        ))}
+        <div className="flex min-h-[100vh] w-[100vw] items-center">
+            <div className="flex w-full justify-center min-h-[100vh] p-10 bg-slate-400">
+                <div className="flex container max-w-[1024px]">
+                    <div className="flex w-full flex-col px-5">
+                        <WordBox
+                            head
+                            text="คำศัพท์"
+                        />
+                        <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
+                            {data.map((item, key) => (
+                                <WordBox
+                                    key={key}
+                                    text={item.word}
+                                    onClick={() => fnHandleClickAddItem(item.word)}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className="flex w-full flex-col px-5">
-                    <WordBox
-                        head
-                        text="ภาษาไทย"
-                    />
-                    <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
-                        {data_word_th.map((item) => (
-                            <WordBox
-                                key={`data_word_th_${item.word}`}
-                                showLock
-                                autoRemove
-                                data={item}
-                                onClick={() => fnHandleClickRemoveTHItem(item)}
-                                // setData={setData}
-                                // setDataWord={setDataWordTH}
-                            />
-                        ))}
+                    <div className="flex w-full flex-col px-5">
+                        <WordBox
+                            head
+                            text="ภาษาไทย"
+                        />
+                        <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
+                            {data_word_th.map((item) => (
+                                <WordBox
+                                    key={`data_word_th_${item.word}`}
+                                    showLock
+                                    autoRemove
+                                    data={item}
+                                    onClick={() => fnHandleClickRemoveTHItem(item)}
+                                    // setData={setData}
+                                    // setDataWord={setDataWordTH}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className="flex w-full flex-col px-5">
-                    <WordBox
-                        head
-                        text="ภาษาอังกฤษ"
-                    />
-                    <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
-                        {data_word_en.map((item) => (
-                            <WordBox
-                                key={`data_word_en_${item.word}`}
-                                showLock
-                                autoRemove
-                                data={item}
-                                onClick={() => fnHandleClickRemoveENItem(item)}
-                                // setData={setData}
-                                // setDataWord={setDataWordEN}
-                            />
-                        ))}
+                    <div className="flex w-full flex-col px-5">
+                        <WordBox
+                            head
+                            text="ภาษาอังกฤษ"
+                        />
+                        <div className="flex flex-col bg-white bg-opacity-30 rounded-lg p-5 h-full">
+                            {data_word_en.map((item) => (
+                                <WordBox
+                                    key={`data_word_en_${item.word}`}
+                                    showLock
+                                    autoRemove
+                                    data={item}
+                                    onClick={() => fnHandleClickRemoveENItem(item)}
+                                    // setData={setData}
+                                    // setDataWord={setDataWordEN}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

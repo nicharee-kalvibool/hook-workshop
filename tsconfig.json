@@ -22,6 +22,7 @@
         "noFallthroughCasesInSwitch": true,
         "paths": {
             "@pages/*": ["./src/pages/*"],
+            "@router/*": ["./src/router/*"],
             "@components/*": ["./src/components/*"],
             "@assets/*": ["./src/assets/*"],
             "@data/*": ["./src/assets/data/*"]
