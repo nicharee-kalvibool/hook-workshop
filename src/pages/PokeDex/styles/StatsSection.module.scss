@@ -1,0 +1,39 @@
+.containerStats {
+    transform: rotateY(-30deg);
+    transition-duration: 0.3s;
+
+    &:hover {
+        transform: rotateY(0);
+    }
+
+    .statBar {
+        &.hp {
+            background-color: #48c800;
+        }
+
+        &.attack {
+            background-color: rgb(255, 109, 109);
+        }
+
+        &.defense {
+            background-color: #6b98ff;
+        }
+
+        &.speed {
+            background-color: skyblue;
+        }
+
+        &.special {
+            background-color: pink;
+        }
+    }
+}
+
+.containerinfo {
+    transform: rotateY(30deg);
+    transition-duration: 0.3s;
+
+    &:hover {
+        transform: rotateY(0);
+    }
+}

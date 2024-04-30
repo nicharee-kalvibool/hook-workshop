@@ -1,0 +1,365 @@
+.pokemonCard {
+    background-color: transparent;
+    perspective: 1000px;
+
+    &:hover .pokemonCardInner {
+        transform: rotateY(180deg);
+    }
+}
+
+.pokemonCardInner {
+    @apply w-[250px] h-[325px];
+
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pokemonCardFront,
+.pokemonCardBack {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+}
+
+.pokemonItem {
+    @apply p-3;
+
+    background-color: #333;
+    border-radius: 15px;
+    cursor: pointer;
+
+    .pokemonImgSection {
+        z-index: 0;
+    }
+
+    .pokemonDetail {
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        transition-duration: 0.5s;
+    }
+
+    &.pokemonCardBack {
+        background-color: #fff;
+        transform: rotateY(180deg);
+    }
+}
+
+.typeIcon {
+    @apply flex justify-center items-center;
+
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+        @apply mb-2;
+    }
+
+    & img {
+        height: 60%;
+        width: 60%;
+        margin: 20%;
+    }
+}
+
+.typeIcon2 {
+    @apply flex justify-center items-center;
+
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+        @apply mr-2;
+    }
+
+    & img {
+        height: 60%;
+        width: 60%;
+        margin: 20%;
+    }
+}
+
+.statusIcon {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s;
+
+    & img {
+        height: 60%;
+        width: 60%;
+        margin: 20%;
+    }
+}
+
+.pokemonImg {
+    &.bugType {
+        background-image: radial-gradient(circle at center, #92bc2c, transparent);
+    }
+
+    &.darkType {
+        background-image: radial-gradient(circle at center, #595761, transparent);
+    }
+
+    &.dragonType {
+        background-image: radial-gradient(circle at center, #0c69c8, transparent);
+    }
+
+    &.electricType {
+        background-image: radial-gradient(circle at center, #f2d94e, transparent);
+    }
+
+    &.fireType {
+        background-image: radial-gradient(circle at center, #fba54c, transparent);
+    }
+
+    &.fairyType {
+        background-image: radial-gradient(circle at center, #ee90e6, transparent);
+    }
+
+    &.fightingType {
+        background-image: radial-gradient(circle at center, #d3425f, transparent);
+    }
+
+    &.flyingType {
+        background-image: radial-gradient(circle at center, #a1bbec, transparent);
+    }
+
+    &.ghostType {
+        background-image: radial-gradient(circle at center, #5f6dbc, transparent);
+    }
+
+    &.grassType {
+        background-image: radial-gradient(circle at center, #5fbd58, transparent);
+    }
+
+    &.groundType {
+        background-image: radial-gradient(circle at center, #da7c4d, transparent);
+    }
+
+    &.iceType {
+        background-image: radial-gradient(circle at center, #75d0c1, transparent);
+    }
+
+    &.normalType {
+        background-image: radial-gradient(circle at center, #a0a29f, transparent);
+    }
+
+    &.poisonType {
+        background-image: radial-gradient(circle at center, #b763cf, transparent);
+    }
+
+    &.psychicType {
+        background-image: radial-gradient(circle at center, #fa8581, transparent);
+    }
+
+    &.rockType {
+        background-image: radial-gradient(circle at center, #c9bb8a, transparent);
+    }
+
+    &.steelType {
+        background-image: radial-gradient(circle at center, #5695a3, transparent);
+    }
+
+    &.waterType {
+        background-image: radial-gradient(circle at center, #539ddf, transparent);
+    }
+}
+
+.bug {
+    background: #92bc2c;
+    box-shadow: 0 0 20px #92bc2c;
+}
+
+.dark {
+    background: #595761;
+    box-shadow: 0 0 20px #595761;
+}
+
+.dragon {
+    background: #0c69c8;
+    box-shadow: 0 0 20px #0c69c8;
+}
+
+.electric {
+    background: #f2d94e;
+    box-shadow: 0 0 20px #f2d94e;
+}
+
+.fire {
+    background: #fba54c;
+    box-shadow: 0 0 20px #fba54c;
+}
+
+.fairy {
+    background: #ee90e6;
+    box-shadow: 0 0 20px #ee90e6;
+}
+
+.fighting {
+    background: #d3425f;
+    box-shadow: 0 0 20px #d3425f;
+}
+
+.flying {
+    background: #a1bbec;
+    box-shadow: 0 0 20px #a1bbec;
+}
+
+.ghost {
+    background: #5f6dbc;
+    box-shadow: 0 0 20px #5f6dbc;
+}
+
+.grass {
+    background: #5fbd58;
+    box-shadow: 0 0 20px #5fbd58;
+}
+
+.ground {
+    background: #da7c4d;
+    box-shadow: 0 0 20px #da7c4d;
+}
+
+.ice {
+    background: #75d0c1;
+    box-shadow: 0 0 20px #75d0c1;
+}
+
+.normal {
+    background: #a0a29f;
+    box-shadow: 0 0 20px #a0a29f;
+}
+
+.poison {
+    background: #b763cf;
+    box-shadow: 0 0 20px #b763cf;
+}
+
+.psychic {
+    background: #fa8581;
+    box-shadow: 0 0 20px #fa8581;
+}
+
+.rock {
+    background: #c9bb8a;
+    box-shadow: 0 0 20px #c9bb8a;
+}
+
+.steel {
+    background: #5695a3;
+    box-shadow: 0 0 20px #5695a3;
+}
+
+.water {
+    background: #539ddf;
+    box-shadow: 0 0 20px #539ddf;
+}
+
+.logoText {
+    color: #fff;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        text-shadow: -2px -2px 0 #2943d1, 2px 2px 0 #ffcd00;
+    }
+
+    25% {
+        text-shadow: 2px 2px 0 #2943d1, -2px -2px 0 #ffcd00;
+    }
+
+    50% {
+        text-shadow: 2px -2px 0 #2943d1, -2px 2px 0 #ffcd00;
+    }
+
+    75% {
+        text-shadow: -2px 2px 0 #2943d1, 2px -2px 0 #ffcd00;
+    }
+
+    100% {
+        text-shadow: 2px 2px 0 #2943d1, -2px -2px 0 #ffcd00;
+    }
+}
+
+.bugActive {
+    box-shadow: 0 0 20px #92bc2c;
+}
+
+.darkActive {
+    box-shadow: 0 0 20px #595761;
+}
+
+.dragonActive {
+    box-shadow: 0 0 20px #0c69c8;
+}
+
+.electricActive {
+    box-shadow: 0 0 20px #f2d94e;
+}
+
+.fireActive {
+    background: #fba54c;
+    box-shadow: 0 0 20px #fba54c;
+}
+
+.fairyActive {
+    box-shadow: 0 0 20px #ee90e6;
+}
+
+.fightingActive {
+    box-shadow: 0 0 20px #d3425f;
+}
+
+.flyingActive {
+    box-shadow: 0 0 20px #a1bbec;
+}
+
+.ghostActive {
+    box-shadow: 0 0 20px #5f6dbc;
+}
+
+.grassActive {
+    box-shadow: 0 0 20px #5fbd58;
+}
+
+.groundActive {
+    box-shadow: 0 0 20px #da7c4d;
+}
+
+.iceActive {
+    box-shadow: 0 0 20px #75d0c1;
+}
+
+.normalActive {
+    box-shadow: 0 0 20px #a0a29f;
+}
+
+.poisonActive {
+    box-shadow: 0 0 20px #b763cf;
+}
+
+.psychicActive {
+    box-shadow: 0 0 20px #fa8581;
+}
+
+.rockActive {
+    box-shadow: 0 0 20px #c9bb8a;
+}
+
+.steelActive {
+    box-shadow: 0 0 20px #5695a3;
+}
+
+.waterActive {
+    box-shadow: 0 0 20px #539ddf;
+}

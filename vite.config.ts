@@ -12,6 +12,10 @@ export default defineConfig({
             "@components": resolve(__dirname, "src/components"),
             "@assets": resolve(__dirname, "src/assets"),
             "@data": resolve(__dirname, "src/assets/data"),
+            "@constants": resolve(__dirname, "src/constants"),
+            "@store": resolve(__dirname, "src/store"),
+            "@services": resolve(__dirname, "src/services"),
+            "@utils": resolve(__dirname, "src/utils"),
         },
     },
     server: {

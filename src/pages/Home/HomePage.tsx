@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/Hompage.module.css";
-import { Book, HelpCircle } from "react-feather";
+import { Book, GitHub } from "react-feather";
 
 const HomePage = () => {
     const nevigate = useNavigate();
@@ -34,12 +34,13 @@ const HomePage = () => {
 
                         <Book color="#fff" />
                     </div>
-                    <div className={styles.disbaled}>
-                        <HelpCircle color="#ddd" />
+                    <div onClick={() => handleNevigate("/pokedex")}>
+                        <span className="flex flex-col items-center">
+                            <div>Poke DEX</div>
+                        </span>
+
+                        <GitHub color="#fff" />
                     </div>
-                    {/* <div className={styles.disbaled}>
-                        <HelpCircle color="#ddd" />
-                    </div> */}
                 </div>
             </nav>
         </div>

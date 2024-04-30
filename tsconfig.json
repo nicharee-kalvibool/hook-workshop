@@ -25,7 +25,11 @@
             "@router/*": ["./src/router/*"],
             "@components/*": ["./src/components/*"],
             "@assets/*": ["./src/assets/*"],
-            "@data/*": ["./src/assets/data/*"]
+            "@data/*": ["./src/assets/data/*"],
+            "@constants/*": ["./src/constants/*"],
+            "@store/*": ["./src/store/*"],
+            "@services/*": ["./src/services/*"],
+            "@utils/*": ["./src/utils/*"]
         }
     },
     "include": ["src"],

@@ -1,0 +1,244 @@
+.logoText {
+    color: #fff;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        text-shadow: -5px -5px 0 #2943d1, 5px 5px 0 #ffcd00;
+    }
+
+    25% {
+        text-shadow: 5px 5px 0 #2943d1, -5px -5px 0 #ffcd00;
+    }
+
+    50% {
+        text-shadow: 5px -5px 0 #2943d1, -5px 5px 0 #ffcd00;
+    }
+
+    75% {
+        text-shadow: -5px 5px 0 #2943d1, 5px -5px 0 #ffcd00;
+    }
+
+    100% {
+        text-shadow: 5px 5px 0 #2943d1, -5px -5px 0 #ffcd00;
+    }
+}
+
+.filterContainer {
+    max-width: 100vw;
+    transition-duration: 0.5s;
+
+    @for $i from 0 through 18 {
+        @if $i == 0 {
+            &.active#{$i} {
+                margin-left: calc(50vw - 48px);
+            }
+        } @else {
+            &.active#{$i} {
+                margin-left: calc(50vw - ((92px * (#{$i} + 1))));
+            }
+        }
+    }
+}
+
+.filter {
+    @apply flex flex-col justify-center items-center mx-2;
+
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.4);
+    transition-duration: 0.5s;
+
+    &.type0 {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        cursor: pointer;
+    }
+
+    &.type1,
+    &.type-1 {
+        opacity: 0.7;
+        cursor: pointer;
+        transform: scale(0.7) translateY(-10px);
+    }
+
+    &.type2,
+    &.type-2 {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    &.type2 {
+        transform: scale(0.55) translateY(-40px) translateX(-30px);
+    }
+    &.type-2 {
+        transform: scale(0.55) translateY(-40px) translateX(30px);
+    }
+
+    &.type3,
+    &.type-3 {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    &.type3 {
+        transform: scale(0.4) translateY(-110px) translateX(-140px);
+    }
+    &.type-3 {
+        transform: scale(0.4) translateY(-110px) translateX(140px);
+    }
+
+    &.type4,
+    &.type-4 {
+        opacity: 0.125;
+        pointer-events: none;
+    }
+
+    &.type4 {
+        transform: scale(0.3) translateY(-200px) translateX(-630px);
+    }
+    &.type-4 {
+        transform: scale(0.3) translateY(-200px) translateX(630px);
+    }
+
+    @for $i from 5 through 18 {
+        &.type#{$i} {
+            transform: translateY(-200px) translateX(-50vw);
+            pointer-events: none;
+        }
+        &.type-#{$i} {
+            transform: translateY(-200px) translateX(50vw);
+            pointer-events: none;
+        }
+    }
+
+    & > span {
+        color: #fff;
+        font-size: 0.7rem;
+        padding-top: 5px;
+        user-select: none;
+    }
+
+    .typeIcon {
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.fillItem {
+    width: calc(50vw - 40px);
+    min-width: calc(50vw - 40px);
+    height: 80px;
+}
+
+.all {
+    background: #f2d94e;
+    box-shadow: inset 0 0 0 10px #0c69c8;
+
+    & > span {
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding-top: 0;
+    }
+}
+.bug {
+    background: #92bc2c;
+    box-shadow: 0 0 20px #92bc2c;
+}
+
+.dark {
+    background: #595761;
+    box-shadow: 0 0 20px #595761;
+}
+
+.dragon {
+    background: #0c69c8;
+    box-shadow: 0 0 20px #0c69c8;
+}
+
+.electric {
+    background: #f2d94e;
+    box-shadow: 0 0 20px #f2d94e;
+}
+
+.fire {
+    background: #fba54c;
+    box-shadow: 0 0 20px #fba54c;
+}
+
+.fairy {
+    background: #ee90e6;
+    box-shadow: 0 0 20px #ee90e6;
+}
+
+.fighting {
+    background: #d3425f;
+    box-shadow: 0 0 20px #d3425f;
+}
+
+.flying {
+    background: #a1bbec;
+    box-shadow: 0 0 20px #a1bbec;
+}
+
+.ghost {
+    background: #5f6dbc;
+    box-shadow: 0 0 20px #5f6dbc;
+}
+
+.grass {
+    background: #5fbd58;
+    box-shadow: 0 0 20px #5fbd58;
+}
+
+.ground {
+    background: #da7c4d;
+    box-shadow: 0 0 20px #da7c4d;
+}
+
+.ice {
+    background: #75d0c1;
+    box-shadow: 0 0 20px #75d0c1;
+}
+
+.normal {
+    background: #a0a29f;
+    box-shadow: 0 0 20px #a0a29f;
+}
+
+.poison {
+    background: #b763cf;
+    box-shadow: 0 0 20px #b763cf;
+}
+
+.psychic {
+    background: #fa8581;
+    box-shadow: 0 0 20px #fa8581;
+}
+
+.rock {
+    background: #c9bb8a;
+    box-shadow: 0 0 20px #c9bb8a;
+}
+
+.steel {
+    background: #5695a3;
+    box-shadow: 0 0 20px #5695a3;
+}
+
+.water {
+    background: #539ddf;
+    box-shadow: 0 0 20px #539ddf;
+}
+
+.sticky {
+    border-bottom-left-radius: 300%;
+    border-bottom-right-radius: 300%;
+    background-image: radial-gradient(circle, #ffffff 40%, #ffffff2a 100%);
+}
